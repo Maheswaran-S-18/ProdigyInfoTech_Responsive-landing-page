@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Four Skies — A Field Guide to Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===== FIXED HORIZON NAV ===== -->
+    <nav class="horizon-nav" id="horizonNav">
+      <div class="nav-inner">
+        <a href="#top" class="brand">
+          <span class="brand-mark" id="brandMark"></span>
+          Four&nbsp;Skies
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="#sunny" class="nav-link" data-weather="sunny"
+              >Sunny<span class="nav-icon" data-icon="sunny"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#rainy" class="nav-link" data-weather="rainy"
+              >Rainy<span class="nav-icon" data-icon="rainy"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#snowy" class="nav-link" data-weather="snowy"
+              >Snowy<span class="nav-icon" data-icon="snowy"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#stormy" class="nav-link" data-weather="stormy"
+              >Windy&nbsp;&amp;&nbsp;Stormy<span
+                class="nav-icon"
+                data-icon="stormy"
+              ></span
+            ></a>
+          </li>
+        </ul>
+        <div class="nav-reading" id="navReading">
+          <span class="reading-label">NOW&nbsp;VIEWING</span>
+          <span class="reading-value" id="readingValue">—</span>
+        </div>
+      </div>
+      <div class="nav-progress" id="navProgress"></div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="top">
+      <div class="hero-sky" id="heroSky" aria-hidden="true">
+        <div class="sun-disc"></div>
+        <div class="cloud cloud--a"></div>
+        <div class="cloud cloud--b"></div>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">A field guide in four conditions</p>
+        <h1>The sky keeps<br />changing its mind.</h1>
+        <p class="hero-sub">
+          Scroll to move through a full day of weather — sun, rain, snow, and
+          storm — and watch the instrument bar above track exactly where you
+          are.
+        </p>
+        <a href="#sunny" class="hero-cta"
+          >Start with sunny <span aria-hidden="true">↓</span></a
+        >
+      </div>
+    </header>
+
+    <!-- ===== SUNNY ===== -->
+    <section class="weather-section" id="sunny" data-weather="sunny">
+      <div class="section-inner">
+        <div class="section-icon" data-icon-large="sunny"></div>
+        <div class="section-text">
+          <p class="section-eyebrow">01 · Clear &amp; bright</p>
+          <h2>Sunny</h2>
+          <p>
+            Unbroken light, long shadows, warm air that sits still. High
+            pressure holds the clouds away and the horizon stays sharp from dawn
+            to dusk.
+          </p>
+          <dl class="stat-row">
+            <div>
+              <dt>Sky cover</dt>
+              <dd>0–10%</dd>
+            </div>
+            <div>
+              <dt>UV index</dt>
+              <dd>High</dd>
+            </div>
+            <div>
+              <dt>Feel</dt>
+              <dd>Dry, radiant</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RAINY ===== -->
+    <section class="weather-section" id="rainy" data-weather="rainy">
+      <div class="section-inner">
+        <div class="section-icon" data-icon-large="rainy"></div>
+        <div class="section-text">
+          <p class="section-eyebrow">02 · Low pressure, steady fall</p>
+          <h2>Rainy</h2>
+          <p>
+            Moisture-heavy clouds thicken until they let go. The air cools,
+            sound flattens, and the ground drinks faster than it can hold.
+          </p>
+          <dl class="stat-row">
+            <div>
+              <dt>Sky cover</dt>
+              <dd>80–100%</dd>
+            </div>
+            <div>
+              <dt>Humidity</dt>
+              <dd>85%+</dd>
+            </div>
+            <div>
+              <dt>Feel</dt>
+              <dd>Cool, close</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SNOWY ===== -->
+    <section class="weather-section" id="snowy" data-weather="snowy">
+      <div class="section-inner">
+        <div class="section-icon" data-icon-large="snowy"></div>
+        <div class="section-text">
+          <p class="section-eyebrow">03 · Below freezing, falling slow</p>
+          <h2>Snowy</h2>
+          <p>
+            Water crystallizes on the way down instead of falling as rain.
+            Everything quiets under a layer that keeps building until the
+            temperature turns.
+          </p>
+          <dl class="stat-row">
+            <div>
+              <dt>Temp</dt>
+              <dd>≤ 0°C</dd>
+            </div>
+            <div>
+              <dt>Visibility</dt>
+              <dd>Reduced</dd>
+            </div>
+            <div>
+              <dt>Feel</dt>
+              <dd>Still, muffled</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STORMY ===== -->
+    <section class="weather-section" id="stormy" data-weather="stormy">
+      <div class="section-inner">
+        <div class="section-icon" data-icon-large="stormy"></div>
+        <div class="section-text">
+          <p class="section-eyebrow">04 · Sudden pressure drop</p>
+          <h2>Windy &amp; Stormy</h2>
+          <p>
+            Warm and cold air collide fast. Wind gusts, branches bend, and the
+            sky can flip from calm to violent in the time it takes to find
+            shelter.
+          </p>
+          <dl class="stat-row">
+            <div>
+              <dt>Wind</dt>
+              <dd>40–90 km/h</dd>
+            </div>
+            <div>
+              <dt>Pressure</dt>
+              <dd>Falling fast</dd>
+            </div>
+            <div>
+              <dt>Feel</dt>
+              <dd>Charged, loud</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        Four Skies — built to demonstrate a scroll- and hover-reactive
+        navigation bar.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
